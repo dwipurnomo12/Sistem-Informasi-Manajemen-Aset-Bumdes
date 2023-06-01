@@ -7,60 +7,90 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Sistem Informasi Manajemen Aset Berbasis Web Untuk BUMDES (Badan Usaha Milik Desa)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Sistem informasi manajemen aset biasanya diperlukan untuk memantau dan mengelola aset suatu organisasi atau perusahaan. Tujuan utama dari sistem ini adalah untuk membantu organisasi dalam mengoptimalkan penggunaan aset mereka dan memastikan bahwa mereka beroperasi secara efektif dan efisien.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Fitur
+1. Manajemen User
+Fitur ini berguna untuk mengelola data user yang menggunakan sistem informasi ini, seperti menambahkan user, edit user, dan hapus user. Hak ases ini dimiliki oleh sekretaris (superadmin).
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+ 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. Data Master / Manajemen Aset
+Data master adalah fitur yang berguna untuk menambahkan data aset. Pada menu ini terdiri dari beberapa menu lain yaitu Data Barang, Kategori, Lokasi, dan Satuan yang berfungsi untuk mengelompokan barang/aset. Semua pengguna yaitu Sekretaris, Direktur, dan Kepala Usaha memiliki hak ases ini. Yang membedakan adalah jika sekretaris dan direktur bisa melihat semua data yang ditambahkan oleh semua pengguna. Sedangkan kepala usaha hanya bisa melihat data barang/aset yang dia tambahkan saja.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+3. Pengadaan Barang
+Pengadaan barang merupakan fitur untuk mengelola pengadaan barang baru. Semua pengguna memiliki akses pengadaan barang ini namun fungsinya berbeda.
 
-### Premium Partners
+4. Laporan
+Laporan digunakan untuk melihat dan mencetak data pada aplikasi. Pada menu ini, terdiri dari Statistik untuk melihat grafik aset, Keuangan untuk melihat harga dan total harga dari keseluruhan aset, Cetak laporan berguna untuk mencetak data aset berdasarkan tanggal yang dipilih, dan Cetak label untuk mencetak label masing-masing aset guna memudahkan pelacakan aset.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+5. Riwayat
+Pada menu riwayat terdapat penghapusan aset. Fungsinya adalah untuk melihat data aset yang telah dihapus, nantinya bisa dikembalikan atau di hapus secara permanent. Hak aksesnya sama seperti diatas, Kepala Usaha hanya dapat melihat data yang dia hapus saja, sedangkan Kepala Usaha dan Sekretaris bisa melihat semua riwayat penghapusan aset.
 
-## Contributing
+6. Pengaturan
+Pengaturan terdapat reset password atau ubah password. Fitur ini digunakan untuk memperbarui password sesuai keinginan pengguna.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Teknologi
 
-## Security Vulnerabilities
+Sistem Informasi Inventory Gudang menggunakan beberapa Teknologi diantaranya :
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Laravel - The PHP Framework for Web Artisans
+- JavaScript - JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.
+- Bootstrap - Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. 
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Installasi
+
+Lakukan Clone Project/Unduh manual .
+
+Aktifkan Xampp Control Panel, lalu akses ke http://localhost/phpmyadmin/.
+
+Buat database dengan nama 'simaset'.
+
+Jika melakukan Clone Project, rename file .env.example dengan env dan hubungkan
+database nya dengan mengisikan nama database, 'DB_DATABASE=simaset'.
+
+
+Kemudian, Ketik pada terminal :
+```sh
+php artisan migrate
+```
+
+Lalu ketik juga
+
+```sh
+php artisan migrate:fresh --seed
+```
+
+Jalankan aplikasi 
+
+```sh
+php artisan serve
+```
+
+Akses Aplikasi di Web browser 
+```sh
+127.0.0.1:8000
+```
+
+
+
+![Screenshot_935](https://github.com/dwipurnomo12/Sistem-Informasi-Manajemen-Aset-Bumdes/assets/105181667/ca70c6b3-3a3f-4fd3-be2b-7bdff59917f1)
+
+![Screenshot_936](https://github.com/dwipurnomo12/Sistem-Informasi-Manajemen-Aset-Bumdes/assets/105181667/b2a44f40-6e05-4288-ae9c-0c8a116bfcbe)
+
+![Screenshot_937](https://github.com/dwipurnomo12/Sistem-Informasi-Manajemen-Aset-Bumdes/assets/105181667/a691b1e1-8f4b-4091-a68d-36477d493fa2)
+
+![Screenshot_939](https://github.com/dwipurnomo12/Sistem-Informasi-Manajemen-Aset-Bumdes/assets/105181667/82643220-d346-477c-a17a-5e06521687c5)
+
+![Screenshot_940](https://github.com/dwipurnomo12/Sistem-Informasi-Manajemen-Aset-Bumdes/assets/105181667/e1046ddd-c486-46cb-8d66-b9bf335d5fd9)
+
+
