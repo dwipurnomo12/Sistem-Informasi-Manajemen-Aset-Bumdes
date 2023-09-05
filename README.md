@@ -40,7 +40,7 @@ Pengaturan terdapat reset password atau ubah password. Fitur ini digunakan untuk
 
 ## Teknologi
 
-Sistem Informasi Inventory Gudang menggunakan beberapa Teknologi diantaranya :
+Sistem Informasi Manajemen Aset menggunakan beberapa Teknologi diantaranya :
 
 - Laravel - The PHP Framework for Web Artisans
 - JavaScript - JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.
